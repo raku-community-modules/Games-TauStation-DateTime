@@ -1,4 +1,5 @@
-unit class GCT is DateTime;
+unit module Games::TauStation::DateTime;
+class GCT is DateTime is export {
 
 # 198.14/07:106GCT = 1524361376.925148
 my constant catastrophe = DateTime.new: '1964-01-22T01:42:56.925148Z';
@@ -78,4 +79,6 @@ method OldEarth {
 }
 method DateTime {
     DateTime.new: self.Instant;
+}
+
 }
