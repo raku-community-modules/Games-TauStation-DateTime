@@ -2,12 +2,15 @@ use lib 'lib';
 use Test;
 use Games::TauStation::DateTime;
 
-plan 302;
+plan 303;
 
-is GCT.new('1964-01-22T01:42:56.925148Z'), '000.00/00:000 GCT',
+is GCT.new('1964-01-22T00:00:27.689615Z'), '000.00/00:000 GCT',
     'Catastrophe time Old Earth -> GCT';
-is GCT.new('000.00/00:000 GCT').OE, '1964-01-22T01:42:56.925148Z',
+is GCT.new('000.00/00:000 GCT').OE, '1964-01-22T00:00:27.689615Z',
     'Catastrophe time GCT -> Old Earth';
+
+is GCT.new('198.15/03:973 GCT').OE, '2018-04-23T00:57:13.361615Z',
+    'some GCT date to OE';
 
 for ^100 {
     my $t := 1524424977.922727.rand.Rat;

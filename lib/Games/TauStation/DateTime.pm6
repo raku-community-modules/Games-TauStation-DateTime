@@ -1,8 +1,9 @@
 unit module Games::TauStation::DateTime;
 class GCT is DateTime is export {
 
-# 198.14/07:106GCT = 1524361376.925148
-my constant catastrophe = DateTime.new: '1964-01-22T01:42:56.925148Z';
+# 198.15/03:973 GCT = 2018-04-23T00:57:13.361615Z
+my constant catastrophe = DateTime.new: '1964-01-22T00:00:27.689615Z';
+
 my regex sign    { <.ws>? <[-−+]>? <.ws>? }
 my regex cycle   { <.ws>? \d**{1..*} <.ws>? }
 my regex day     { <.ws>? \d**{1..2} <.ws>? }

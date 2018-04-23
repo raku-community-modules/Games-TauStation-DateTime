@@ -1,3 +1,16 @@
+
+# 198.15/03:973 GCT = 2018-04-23T00:57:13.361615Z
+my $d := DateTime.new: "2018-04-23T00:57:13.361615Z";
+
+say $d.earlier(:seconds(
+    198*100*24*60*60
+    + 15*24*60*60
+    + 3*24*60*60/100
+    + 973*24*60*60/100000
+))
+
+=finish
+
 use lib <lib ../lib>;
 
 use Games::TauStation::DateTime;
