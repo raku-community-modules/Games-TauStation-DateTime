@@ -6,7 +6,7 @@ Games::TauStation::DateTime — Convert [TauStation](https://taustation.space)'s
 
 # SYNOPSIS
 
-```perl6
+```raku
 use Games::TauStation::DateTime;
 
 # Show time in GCT or Old Earth time:
@@ -29,7 +29,7 @@ say GCT.new('193.99/59:586 GCT').posix; # OUTPUT: «1488556832␤»
 # DESCRIPTION
 
 This module implements a subclass of
-[`DateTime`](https://docs.perl6.org/type/DateTime)
+[`DateTime`](https://docs.raku.org/type/DateTime)
 that lets you convert times between [TauStation](https://taustation.space/)'s
 [Galactic Coordinated Time
     (GCT)](https://alpha.taustation.space/archive/general/gct) and Old Earth
@@ -39,17 +39,17 @@ that lets you convert times between [TauStation](https://taustation.space/)'s
 
 ### Inherited
 
-Inherits all methods from [`DateTime`](https://docs.perl6.org/type/DateTime)
+Inherits all methods from [`DateTime`](https://docs.raku.org/type/DateTime)
 
 ### `.new`
 
-```perl6
+```raku
 multi method new (Str:D $ where /<gct-time>/ --> GCT:D);
 multi method new (Str:D $ where /<gct-duration>/ --> GCT:D);
 ```
 
 In addition to regular [`DateTime`
-constructors](https://docs.perl6.org/type/DateTime#method_new), two new ones
+constructors](https://docs.raku.org/type/DateTime#method_new), two new ones
 are provided that take a string with either a GCT time or GCT duration, which
 is similar to time, except it's prefixed with uppercase letter `D`
 (see [CORETECHS archive for details](https://alpha.taustation.space/archive/general/gct)).
@@ -81,7 +81,7 @@ These are examples of valid durations:
 
 ### `.OE`/`.OldEarth`
 
-```perl6
+```raku
 say GCT.new('D12/43:044 GCT');          # OUTPUT: «198.27/19:285 GCT␤»
 say GCT.new('D12/43:044 GCT').OE;       # OUTPUT: «2018-05-05T06:20:12.543815Z␤»
 say GCT.new('D12/43:044 GCT').OldEarth; # OUTPUT: «2018-05-05T06:20:12.543815Z␤»
@@ -95,25 +95,25 @@ set to default [`DateTime`](https://docs.perl6.org/type/DateTime) formatter
 
 ### `.DateTime`
 
-```perl6
+```raku
 say GCT.new('D12/43:044 GCT').DateTime;       # OUTPUT: «2018-05-05T06:29:14.494109Z␤»
 say GCT.new('D12/43:044 GCT').DateTime.^name; # OUTPUT: «DateTime␤»
 ```
 
 Coerces a `GCT` object to plain
-[`DateTime`](https://docs.perl6.org/type/DateTime) object.
+[`DateTime`](https://docs.raku.org/type/DateTime) object.
 
 ----
 
 #### REPOSITORY
 
 Fork this module on GitHub:
-https://github.com/zoffixznet/perl6-Games-TauStation-DateTime
+https://github.com/raku-community-modules/Games-TauStation-DateTime
 
 #### BUGS
 
 To report bugs or request features, please use
-https://github.com/zoffixznet/perl6-Games-TauStation-DateTime/issues
+https://github.com/raku-community-modules/Games-TauStation-DateTime/issues
 
 #### AUTHOR
 
