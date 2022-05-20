@@ -1,8 +1,8 @@
-use lib 'lib';
 use Test;
 use Games::TauStation::DateTime;
 
 plan 31;
+
 with GCT.new: '100.18/05:407 GCT' {
     is .later( :cycle),      '101.18/05:407 GCT', ':cycle';
     is .later(:3cycles),     '103.18/05:407 GCT', ':3cycles';
@@ -63,3 +63,5 @@ with GCT.new: '100.18/05:407 GCT' {
     is .later(:years(-10020)), GCT.new('-36497.11/94:612 GCT'),
         ':years(-10020)';
 }
+
+# vim: expandtab shiftwidth=4

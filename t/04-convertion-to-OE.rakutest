@@ -1,4 +1,3 @@
-use lib 'lib';
 use Test;
 use Games::TauStation::DateTime;
 
@@ -19,3 +18,5 @@ for ^100 {
     is-deeply GCT.new($t).DateTime, DateTime.new($t),
         ".DateTime with time $t";
 }
+
+# vim: expandtab shiftwidth=4

@@ -17,7 +17,9 @@
   "resources": [
   ],
   "source-url": "https://github.com/raku-community-modules/Games-TauStation-DateTime.git",
-  "tags": [ "TAUSTATION", "SPACE"
+  "tags": [
+    "TAUSTATION",
+    "SPACE"
   ],
   "test-depends": [
   ],

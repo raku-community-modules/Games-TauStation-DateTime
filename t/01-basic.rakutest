@@ -1,8 +1,8 @@
-use lib 'lib';
 use Test;
 use Games::TauStation::DateTime;
 
 plan 15;
+
 isa-ok GCT, DateTime;
 
 is-deeply GCT.new('198.14/07:106GCT'),
@@ -42,3 +42,5 @@ is-approx GCT.new('D /07:106 GCT').Instant.Rat, :$abs-tol,
     'D /07:106 GC';
 is-approx GCT.new('D-/07:106 GCT').Instant.Rat, :$abs-tol,
     GCT.now.earlier(:7segments).earlier(:106units).Instant.Rat;
+
+# vim: expandtab shiftwidth=4
