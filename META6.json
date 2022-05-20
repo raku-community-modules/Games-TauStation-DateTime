@@ -1,16 +1,25 @@
 {
-    "perl"         : "6.c",
-    "name"         : "Games::TauStation::DateTime",
-    "license"      : "Artistic-2.0",
-    "version"      : "1.001006",
-    "description"  : "Convert Coordinated Central Time to Old Earth Time",
-    "depends"      : [ ],
-    "test-depends" : [ "Test" ],
-    "provides"     : {
-        "Games::TauStation::DateTime": "lib/Games/TauStation/DateTime.pm6",
-        "GCT" : "lib/Games/TauStation/DateTime.pm6"
-    },
-    "authors"      : [ "Zoffix Znet" ],
-    "source-url"   :
-        "https://github.com/raku-community-modules/Games-TauStation-DateTime.git"
+  "auth": "zef:raku-community-modules",
+  "authors": [
+    "Zoffix Znet"
+  ],
+  "build-depends": [
+  ],
+  "depends": [
+  ],
+  "description": "Convert Coordinated Central Time to Old Earth Time",
+  "license": "Artistic-2.0",
+  "name": "Games::TauStation::DateTime",
+  "perl": "6.c",
+  "provides": {
+    "Games::TauStation::DateTime": "lib/Games/TauStation/DateTime.rakumod"
+  },
+  "resources": [
+  ],
+  "source-url": "https://github.com/raku-community-modules/Games-TauStation-DateTime.git",
+  "tags": [ "TAUSTATION", "SPACE"
+  ],
+  "test-depends": [
+  ],
+  "version": "1.1"
 }
